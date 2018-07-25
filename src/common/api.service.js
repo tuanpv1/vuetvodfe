@@ -13,7 +13,6 @@ const ApiService = {
         Vue.axios.defaults.headers.common['Content-type'] = `application/json`
         Vue.axios.defaults.headers.common['X-Api-Key'] = `19f7qpvuvl39szgnzc4wtmuzdzpqiej9`
         Vue.axios.defaults.headers.common['X-Language'] = `vi`
-        // Vue.axios.defaults.headers.common['Access-Control-Allow-Origin'] = `*`;
     },
 
     query (resource, params) {

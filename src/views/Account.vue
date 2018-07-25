@@ -3,8 +3,13 @@
         <div class="link_map">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="acc.html">Tài khoản</a></li>
+                    <li>
+                        <router-link class="nav-link"
+                                     exact
+                                     :to="{ name: 'home' }">
+                            <i class="ion-compose"></i>Trang chủ
+                        </router-link>
+                    </li>
                     <li class="active">Thông tin tài khoản</li>
                 </ol>
             </div>
@@ -55,7 +60,7 @@
 
                 </div>
                 <p style="text-align: center;">
-                    <a class="btn btn-primary btn-ok">OK</a>
+                    <a class="btn btn-primary btn-ok" v-on:click="goToRecharge()">OK</a>
                     <a class="btn btn-danger btn-ok" v-on:click="logOutAccount()">Đăng xuất</a>
                 </p>
             </div>
@@ -67,7 +72,7 @@
     import {LOGOUT} from '@/store/actions.type'
 
     export default {
-        name: 'RwvHeader',
+        name: 'account',
         computed: {
             ...mapGetters([
                 'currentUser',
@@ -79,6 +84,9 @@
                 this.$store
                     .dispatch(LOGOUT)
                     .then(() => this.$router.push({name: 'home'}))
+            },
+            goToRecharge(){
+                this.$router.push({name: 'recharge'})
             }
         }
     }

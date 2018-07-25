@@ -75,8 +75,6 @@
         name: 'RwvLogin',
         data () {
             return {
-//                loginSuccess:'<span class="alert bg_green"><i class="fa fa-check-circle" aria-hidden="true"></i>Quý khách đã đăng nhập thành công.</span>',
-//                loginfailed:'<span class="alert bg_red"><i class="fa fa-times"></i>Địa chỉ MAC không đúng, quý khách vui lòng nhập lại !</span>',
                 mac: '',
             }
         },
@@ -84,20 +82,18 @@
             submitToServer (mac) {
                 this.$store
                     .dispatch(LOGIN, {mac})
-                    .then(() => this.$router.push({name: 'home'}))
+                    .then(
+                        () => {
+                            $('#exampleModal').modal('hide'),
+                            this.$router.push({name: 'home'})
+                        }
+                    )
             },
-            removeErrors: function(event){
-
-            }
         },
         computed: {
             ...mapState({
                 errors: state => state.auth.errors
             })
         }
-    }
-    
-    function re() {
-        
     }
 </script>

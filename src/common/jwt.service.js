@@ -2,6 +2,7 @@ const ID_TOKEN_KEY = 'id_token'
 
 export default {
   getToken () {
+      // window.localStorage.removeItem(ID_TOKEN_KEY);
     return window.localStorage.getItem(ID_TOKEN_KEY)
   },
 

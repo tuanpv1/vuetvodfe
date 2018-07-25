@@ -19,6 +19,11 @@ export default new Router({
             name: 'info',
             path: '/info',
             component: () => import('@/views/Account')
+        },
+        {
+            name: 'recharge',
+            path: '/recharge',
+            component: () => import('@/views/Recharge')
         }
     ]
 })
