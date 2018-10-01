@@ -130,7 +130,6 @@
 
             </div>
         </section>
-
         <section class="section-wrap testimonials-slider">
             <div class="container">
                 <h2 class="heading-white text-center"> Hàng trăm ngàn khách hàng đang sử dụng ứng dụng TVoD</h2>
@@ -206,7 +205,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section-wrap client" style="padding-bottom:0;">
             <div class="container">
 
