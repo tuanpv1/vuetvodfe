@@ -93,7 +93,11 @@
         computed: {
             ...mapState({
                 errors: state => state.auth.errors
-            })
+            }),
+            ...mapGetters([
+                'currentUser',
+                'isAuthenticated'
+            ])
         }
     }
 </script>

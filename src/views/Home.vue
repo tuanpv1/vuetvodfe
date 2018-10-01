@@ -241,7 +241,6 @@
     import Vue from 'vue/dist/vue.js'
     import {mapGetters} from 'vuex'
 
-
     export default {
         name: 'home',
     };
